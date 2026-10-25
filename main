@@ -1,0 +1,484 @@
+\begin{filecontents*}[overwrite]{refs.bib}
+@article{mytnyk2023,author={Mytnyk, B. and Tkachyk, O. and Shakhovska, N. and Fedushko, S. and Syerov, Y.},title={Application of artificial intelligence for fraudulent banking operations recognition},journal={Big Data and Cognitive Computing},volume={7},number={2},pages={93},year={2023}}
+@article{ashfaq2022,author={Ashfaq, T. and Khalid, R. and Yahaya, A. S. and Aslam, S. and Azar, A. T. and Alsafari, S. and Hameed, I. A.},title={A machine learning and blockchain based efficient fraud detection mechanism},journal={Sensors},volume={22},number={19},pages={7162},year={2022}}
+@article{alsuwailem2023,author={Alsuwailem, A. A. S. and Salem, E. and Saudagar, A. K. J.},title={Performance of different machine learning algorithms in detecting financial fraud},journal={Computational Economics},volume={62},pages={1631--1667},year={2023}}
+@article{xiong2022,author={Xiong, T. and Ma, Z. and Li, Z. and Dai, J.},title={The analysis of influence mechanism for internet financial fraud identification and user behavior based on machine learning approaches},journal={Int. J. Syst. Assur. Eng. Manag.},volume={13},number={3},pages={996--1007},year={2022}}
+@article{chang2024,author={Chang, V. and Ali, B. and Golightly, L. and Ganatra, M. A. and Mohamed, M.},title={Investigating credit card payment fraud with detection methods using advanced machine learning},journal={Information},volume={15},number={8},pages={478},year={2024}}
+@article{theodorakopoulos2025,author={Theodorakopoulos, L. and Theodoropoulou, A. and Tsimakis, A. and Halkiopoulos, C.},title={Big data-driven distributed machine learning for scalable credit card fraud detection using {PySpark}, {XGBoost}, and {CatBoost}},journal={Electronics},volume={14},number={9},pages={1754},year={2025}}
+@article{preciado2025,author={Preciado Mart{\'\i}nez, P. M. and Reier Forradellas, R. F. and Garay Gallastegui, L. M. and N{\'a}{\~n}ez Alonso, S. L.},title={Comparative analysis of machine learning models for the detection of fraudulent banking transactions},journal={Cogent Business \& Management},volume={12},number={1},pages={2474209},year={2025}}
+@article{bakumenko2022,author={Bakumenko, A. and Elragal, A.},title={Detecting anomalies in financial data using machine learning algorithms},journal={Systems},volume={10},number={5},pages={130},year={2022}}
+@article{kamal2023,author={Kamal, M.},title={An empirical evaluation of machine learning techniques for financial fraud detection in transaction-level data},journal={American Journal of Interdisciplinary Studies},volume={4},number={4},pages={210--249},year={2023}}
+@article{ali2022,author={Ali, A. and Abd Razak, S. and Othman, S. H. and Eisa, T. A. E. and Al-Dhaqm, A. and Nasser, M. and Elhassan, T. and Elshafie, H. and Saif, A.},title={Financial fraud detection based on machine learning: A systematic literature review},journal={Applied Sciences},volume={12},number={19},pages={9637},year={2022}}
+@article{binsulaiman2022,author={Bin Sulaiman, R. and Schetinin, V. and Sant, P.},title={Review of machine learning approach on credit card fraud detection},journal={Human-Centric Intelligent Systems},volume={2},pages={55--68},year={2022}}
+@article{gandhar2024,author={Gandhar, A. and Gupta, K. and Pandey, A. K. and Raj, D.},title={Fraud detection using machine learning and deep learning},journal={SN Computer Science},volume={5},pages={453},year={2024}}
+@article{hafez2025,author={Hafez, I. Y. and Hafez, A. Y. and Saleh, A. and Abd El-Mageed, A. A. and Abohany, A. A.},title={A systematic review of {AI}-enhanced techniques in credit card fraud detection},journal={Journal of Big Data},volume={12},pages={6},year={2025}}
+@article{cheng2025,author={Cheng, D. and Zou, Y. and Xiang, S. and Jiang, C.},title={Graph neural networks for financial fraud detection: A review},journal={Frontiers of Computer Science},volume={19},number={9},pages={199609},year={2025}}
+@article{hernandezaros2024,author={Hernandez Aros, L. and Bustamante Molano, L. X. and Gutierrez-Portela, F. and Moreno Hernandez, J. J. and Rodr{\'\i}guez Barrero, M. S.},title={Financial fraud detection through the application of machine learning techniques: A literature review},journal={Humanities and Social Sciences Communications},volume={11},pages={1130},year={2024}}
+@article{yanto2024,author={Yanto, Y. and Lisah, L. and Tandra, R.},title={The best machine learning model for fraud detection in banking sector: A systematic literature review},journal={eCo-Buss},volume={7},number={2},pages={1361--1384},year={2024}}
+@article{nobanee2021,author={Nobanee, H. and Dilshad, M. N. and Al Dhanhani, M. and Al Neyadi, M. and Al Qubaisi, S. and Al Shamsi, S.},title={Big data applications in the banking sector: A bibliometric analysis approach},journal={SAGE Open},volume={11},number={4},pages={21582440211067234},year={2021}}
+@article{minastireanu2019,author={Minastireanu, E.-A. and Mesnita, G.},title={An analysis of the most used machine learning algorithms for online fraud detection},journal={Informatica Economica},volume={23},number={1},pages={5--16},year={2019}}
+@article{zhou2023,author={Zhou, Y. and Li, H. and Xiao, Z. and Qiu, J.},title={A user-centered explainable artificial intelligence approach for financial fraud detection},journal={Finance Research Letters},volume={58},pages={104309},year={2023}}
+@article{byrapureddy2024,author={Byrapu Reddy, S. R. and Kanagala, P. and Ravichandran, P. and Pulimamidi, R. and Sivaram-babu, P. V. and Polireddi, N. S. A.},title={Effective fraud detection in e-commerce: Leveraging machine learning and big data analytics},journal={Measurement: Sensors},volume={33},pages={101138},year={2024}}
+\end{filecontents*}
+
+\documentclass[conference]{IEEEtran}
+\usepackage{cite}
+\usepackage{amsmath,amssymb}
+\usepackage{graphicx,booktabs,multirow,array}
+\usepackage{tikz,pgfplots}
+\pgfplotsset{compat=1.16}
+\usepackage[colorlinks=true,citecolor=blue,linkcolor=blue,urlcolor=blue]{hyperref} % clickable [n] citations, tables, figures, sections
+\newcommand{\e}[1]{\textit{#1}}  % italic = expected (not measured) value
+
+\begin{document}
+\title{Application of Machine Learning Algorithms and Big Data Analysis to Detect Fraudulent Transactions in the Banking Sector}
+\author{\IEEEauthorblockN{Zhaniya Askarkyzy and Sabina Saiyn}
+\IEEEauthorblockA{Department of Artificial Intelligence and Data Science, Astana IT University, Astana, Kazakhstan\\
+\{242408, 241889\}@astanait.edu.kz}}
+\maketitle
+\nocite{mytnyk2023,ashfaq2022,alsuwailem2023,xiong2022,chang2024,theodorakopoulos2025,preciado2025,bakumenko2022,kamal2023,ali2022,binsulaiman2022,gandhar2024,hafez2025,cheng2025,hernandezaros2024,yanto2024,nobanee2021,minastireanu2019,zhou2023,byrapureddy2024} % fixes numbering [1]--[20] as in your reference list
+\begin{abstract}
+\end{abstract}
+
+% ===== LIT =====
+\section{Introduction}
+The rapid growth of digital banking, online payments, mobile transactions, and electronic financial services has increased the volume of transaction data that financial institutions must monitor. At the same time, fraudulent behaviour has become increasingly complex, creating a need for detection systems that can process large amounts of data and identify suspicious patterns efficiently.
+
+The research problem considered in this literature review is the application of machine learning algorithms and big data analysis to detect fraudulent transactions in the banking sector. The central challenge is that fraudulent transactions normally represent only a small proportion of all transactions, while fraudulent behaviour can change over time. Consequently, a useful detection system must address class imbalance, changing fraud patterns, false positives, scalability, and the requirement for rapid decision making.
+
+The literature selected for this review contains both empirical research and review studies. The technical studies provide evidence about the implementation and evaluation of particular machine learning, anomaly detection, blockchain, and distributed-processing approaches. The review studies provide broader perspectives on algorithmic trends, research classifications, datasets, evaluation metrics, and unresolved research problems.
+
+This literature review has two objectives. First, it analyses individual technical studies to determine how machine learning and big data techniques have been applied to financial fraud detection. Second, it synthesizes review literature to identify common methodologies, research trends, limitations, and opportunities for future research. The remainder of the paper is organized as follows. Section~\ref{sec:lit} discusses the ten technical and ten review articles. Section~\ref{sec:synth} synthesizes common themes and research gaps. Section~\ref{sec:disc} discusses implications for the proposed research. Section~\ref{sec:methods} describes the methods and materials of the proposed study, Section~\ref{sec:results} reports the results, and Section~\ref{sec:concl} concludes.
+
+\section{Technical and Review Articles}\label{sec:lit}
+\subsection{Application of Artificial Intelligence for Fraudulent Banking Operations Recognition}
+Mytnyk et al.~\cite{mytnyk2023} address the problem of recognizing fraudulent banking operations using artificial intelligence and machine learning. The study is directly related to the banking context because it focuses on transaction records and fraudulent banking operations. The methodology uses machine learning and artificial intelligence models for fraud classification and considers imbalanced transaction data. A stacked generalization approach is examined as part of the detection process. The reported results indicate that stacked generalization achieved an AUC of 0.954. The authors demonstrate that machine learning can distinguish fraudulent from legitimate banking operations. The main contribution is empirical evidence that combining multiple learning models can improve fraud-recognition performance. A strength is the direct focus on banking fraud and performance evaluation, while a limitation is that results obtained from a particular dataset may not automatically generalize to all banking institutions or transaction environments. The article is highly relevant because it supports investigation of ensemble learning as part of a broader big-data fraud detection architecture.
+
+\subsection{Machine Learning and Blockchain Based Fraud Detection}
+Ashfaq et al.~\cite{ashfaq2022} investigate fraud and anomaly detection in financial transactions, particularly in the Bitcoin and e-banking context. The problem is identification of fraudulent transaction patterns while improving the security of the transaction environment. The methodology combines machine learning with blockchain technology. XGBoost and Random Forest are used to classify transaction patterns, while blockchain and smart-contract mechanisms are incorporated into the proposed security architecture. Precision and AUC are among the evaluation measures. The study demonstrates that machine learning can be integrated with blockchain-based transaction security. Its strength is the combination of predictive detection with transaction integrity. However, the experimental environment is particularly focused on Bitcoin transactions, so direct generalization to conventional banking databases requires additional investigation. The study remains relevant because banking-fraud detection can benefit from predictive analytics and secure transaction infrastructures, although blockchain is not the primary focus of the proposed research.
+
+\subsection{Performance of Different Machine Learning Algorithms in Detecting Financial Fraud}
+Alsuwailem et al.~\cite{alsuwailem2023} study the detection of money laundering using supervised machine learning in Saudi Arabia. The research addresses proactive identification of financial crime using transaction and establishment-level information. Random Forest, Decision Tree, Gradient Boosting, and K-Nearest Neighbor models are evaluated using accuracy, precision, recall, F-measure, and AUC. At the establishment level, Random Forest achieved 93\% accuracy, while Decision Tree, Gradient Boosting, and KNN achieved 90\%, 74\%, and 87\%, respectively. At the annual level, Decision Tree and Random Forest both achieved 98\% accuracy. The study contributes empirical evidence that different algorithms perform differently depending on the structure of financial data. Its strength is the use of several algorithms and evaluation metrics. Its limitation is the specific Saudi institutional context and money-laundering problem. The article is relevant because it demonstrates the importance of comparing several algorithms rather than assuming that one model is universally appropriate.
+
+\subsection{Internet Financial Fraud Identification and User Behaviour}
+Xiong et al.~\cite{xiong2022} investigate internet financial fraud identification in a big-data environment and examine factors affecting user behaviour and trust. The study constructs a fraud-identification model using a Back Propagation Neural Network and compares its performance with Support Vector Machine and Random Forest. A structural equation model is also used to investigate relationships involving perceived security, authentication, privacy, transaction non-repudiation, and data integrity. The BPNN-based fraud-identification model achieved a reported precision of 88.14\%, accuracy of 96.37\%, and recall of 70.96\%. The contribution is the integration of technical fraud detection with behavioural and security factors. A strength is that the study does not treat fraud detection as purely an algorithmic problem. However, the results are influenced by the particular internet-finance environment investigated. The study is relevant because banking fraud systems must consider both transaction characteristics and the broader security environment in which customers operate.
+
+\subsection{Credit Card Fraud and Class Imbalance}
+Chang et al.~\cite{chang2024} focus on fraud detection in highly imbalanced credit-card transaction data. The research addresses the problem that legitimate transactions substantially outnumber fraudulent transactions. The methodology compares random under-sampling with oversampling using SMOTE. Machine learning models are evaluated using accuracy, precision, recall, and F1-score. Random under-sampling achieved a recall of 92.86\% but at the cost of lower precision. SMOTE achieved 86.75\% accuracy and an F1-score of 73.47\%, with somewhat lower recall. These results demonstrate the trade-off between identifying more fraudulent cases and maintaining precision. The main contribution is evidence concerning the class-imbalance problem. A strength is the explicit comparison of data-balancing techniques on imbalanced transaction data. A limitation is that balancing strategies may produce different results depending on the dataset and fraud distribution. The study is highly relevant because class imbalance is one of the central problems in banking fraud detection.
+
+\subsection{Big Data-Driven Distributed Machine Learning}
+Theodorakopoulos et al.~\cite{theodorakopoulos2025} address the scalability problem associated with large credit-card transaction datasets. The study implements machine learning within a PySpark-based distributed processing framework. Logistic Regression, Decision Trees, Random Forest, XGBoost, and CatBoost are evaluated using accuracy, precision, recall, F1-score, specificity, Brier score, and latency. XGBoost achieved 99.97\% test accuracy and a Brier score of 0.0002, while CatBoost achieved 99.96\% test accuracy and a Brier score of 0.0004. The study also reports the ability of PySpark to support distributed processing and low-latency analysis. The main contribution is the integration of advanced machine learning with distributed big-data processing. A major strength is that scalability and predictive performance are evaluated together. Potential limitations include computational requirements, possible overfitting in highly accurate models, and the need for further testing in live banking environments. This article is particularly relevant because it directly connects machine learning algorithms with big-data processing infrastructure.
+
+\subsection{Comparative Analysis of Fraudulent Banking Transaction Models}
+Preciado Mart\'inez et al.~\cite{preciado2025} investigate fraudulent banking transactions using real-world transfer data. The principal problem is identifying suspicious transactions in a highly imbalanced financial dataset. The authors compare Random Forest, Neural Networks, and Naive Bayes. The dataset contains approximately 565,000 real-world transfers. Random Forest achieved 100\% accuracy for legitimate transactions and 95.79\% accuracy for fraud detection in the reported evaluation. The findings support the feasibility of machine learning for transaction monitoring. The strength of this study is the direct use of banking transfer data and comparison of several models. A limitation is that results from a single dataset may not represent all banking systems and transaction types. The article is directly relevant because it examines fraudulent banking transactions and provides a comparative basis for selecting machine learning models.
+
+\subsection{Fraud Detection Using Machine Learning and Big Data Analytics}
+Byrapu Reddy et al.~\cite{byrapureddy2024} examine fraud detection in e-commerce using machine learning, artificial intelligence, and big data analytics. Although the context is e-commerce rather than traditional banking, the transaction-monitoring problem is closely related. The study proposes the use of a big-data platform for processing large amounts of online transaction information. Machine learning and AI are considered for pattern recognition, anomaly detection, predictive modelling, and fraud prevention. The study concludes that large-scale data analytics and machine learning can support proactive fraud identification by finding patterns and anomalies within massive transaction datasets. Its strength is the emphasis on the connection between big-data infrastructure and fraud analytics. Its main limitation for the current research is the e-commerce rather than banking setting. Nevertheless, it is relevant because modern banking systems also generate high-volume digital transaction streams that require scalable processing technologies.
+
+\subsection{Anomaly Detection in Financial Data}
+Bakumenko and Elragal~\cite{bakumenko2022} address the detection of financial anomalies and fraudulent or erroneous financial records. The research is motivated by the difficulty of manually identifying irregularities in large financial datasets. The study investigates both supervised and unsupervised machine learning approaches for identifying anomalies in financial data, including general-ledger and accounting information. The findings demonstrate the usefulness of machine learning for automating anomaly detection and supporting financial auditing processes. The research also highlights the importance of identifying unusual observations rather than relying only on predefined fraud rules. A strength is the consideration of both supervised and unsupervised approaches. A limitation is that accounting anomaly detection is not identical to real-time banking transaction fraud detection. The article is relevant because anomaly detection is important when labelled fraudulent transactions are scarce.
+
+\subsection{Empirical Evaluation of Machine Learning Techniques for Financial Fraud Detection}
+Kamal~\cite{kamal2023} investigates machine learning techniques for financial fraud detection using transaction-level data. The study addresses the practical difficulty of balancing fraud detection with false-alert workload in financial institutions. The methodology combines practitioner survey information with transaction records and evaluates data quality, system integration, analytics competency, model interpretability, management support, and compliance readiness. Machine learning models are evaluated using precision, recall, F1-score, ROC AUC, cross-validation, and threshold sensitivity. XGBoost achieved a reported precision of 0.84, recall of 0.79, F1-score of 0.81, and ROC AUC of 0.93. The strength of the research is that it combines technical model evaluation with organizational factors such as data governance and interpretability. A limitation is that the case is based on one enterprise fraud platform and therefore may not represent all banking organizations. The article demonstrates that successful fraud detection requires not only accurate models but also data quality, interpretability, governance, and operational support.
+
+\subsection{Systematic Review of Machine-Learning-Based Financial Fraud Detection}
+Ali et al.~\cite{ali2022} provide a systematic literature review of machine-learning-based financial fraud detection. The review covers fraud types, machine learning algorithms, datasets, and evaluation metrics. Using the Kitchenham systematic review approach, the authors analyse 93 selected articles. SVM and ANN are identified among frequently used machine-learning approaches, while credit-card fraud is identified as a major fraud category. Important research issues include class imbalance, dataset limitations, evaluation problems, and the need for improved fraud detection methodologies. The review is useful because it provides a systematic classification of existing research and identifies recurring methodological problems. It shapes the current research by demonstrating that algorithm selection should be considered together with datasets and evaluation metrics.
+
+\subsection{Review of Machine Learning Approaches for Credit Card Fraud}
+Bin Sulaiman et al.~\cite{binsulaiman2022} review machine learning methods for credit-card fraud detection. The scope includes commonly used machine learning algorithms and the problem of maintaining data confidentiality. The review discusses Artificial Neural Networks, Random Forest, Support Vector Machines, and other approaches, and considers federated learning as a possible way to combine fraud detection with privacy preservation. Major research directions include privacy-preserving and hybrid approaches, while real-time fraud detection remains methodologically difficult. The main strength is the connection between fraud detection and data privacy. A limitation is the specific focus on credit-card fraud. The review contributes to the current research by demonstrating that future banking fraud systems must consider both predictive performance and protection of sensitive financial information.
+
+\subsection{Machine Learning and Deep Learning for Fraud Detection}
+Gandhar et al.~\cite{gandhar2024} review machine learning and deep learning techniques for fraud detection. The review organizes approaches into supervised, unsupervised, and reinforcement-learning categories. It examines recent developments in each category and discusses preprocessing and class-balancing approaches such as SMOTE. The authors also consider deep learning for identifying complex fraud patterns. Evolving fraud behaviour, class imbalance, and the need for adaptive models are identified as important research challenges. A strength is the broad coverage of conventional machine learning and deep learning. A limitation is that a broad fraud-detection review may include application domains beyond banking. The article supports the conceptual classification used in this research: supervised classification, unsupervised anomaly detection, and more advanced learning approaches.
+
+\subsection{Systematic Review of AI-Enhanced Credit Card Fraud Detection}
+Hafez et al.~\cite{hafez2025} systematically review artificial intelligence approaches to credit-card fraud detection. The scope includes machine learning, deep learning, and meta-heuristic optimization. The review examines more than 30 scholarly articles published between 2019 and 2024 and compares methodologies, datasets, preprocessing strategies, AI techniques, and performance metrics. The authors identify continuing limitations in existing models and emphasize the need for models that can adapt to new fraudulent behaviours. The strength of the review is its recent coverage and structured comparison. Its limitation is the focus on credit-card fraud rather than the full range of banking fraud. It is useful for understanding the evolution from traditional ML to deep learning and optimization-based approaches.
+
+\subsection{Graph Neural Networks for Financial Fraud Detection}
+Cheng et al.~\cite{cheng2025} review the application of Graph Neural Networks to financial fraud detection. The review focuses on transaction relationships and the ability of graph models to represent complex financial networks. More than 100 studies are examined and GNN approaches are organized according to applications, deployment environments, and design considerations. Relational modelling is identified as a major direction, while real-world deployment, scalability, and integration into financial systems remain research gaps. The strength of the review is its specific focus on GNNs and relational financial data. Its limitation is that graph methods are more complex to implement than conventional tabular classification. The study expands the understanding of big-data fraud detection by showing that relationships among customers, accounts, devices, merchants, and transactions can be modelled in addition to individual transaction attributes.
+
+\subsection{Literature Review of Machine Learning Techniques for Financial Fraud}
+Hernandez Aros et al.~\cite{hernandezaros2024} review financial fraud detection using machine learning techniques. The authors apply PRISMA and Kitchenham methods and analyse 104 articles published between 2012 and 2023. The review examines authors, countries, journals, datasets, fraud types, machine-learning models, and evaluation metrics, and uses bibliometric analysis to identify research patterns. The review finds extensive use of real datasets, with Random Forest among frequently used supervised approaches and autoencoders among unsupervised approaches. It also highlights challenges related to data quality, fraud evolution, dataset availability, and model complexity. Its strength is the large number of reviewed studies and the combination of systematic and bibliometric analysis. A limitation is that the review covers financial fraud broadly rather than only banking transactions.
+
+\subsection{Systematic Review of Fraud Detection in the Banking Sector}
+Yanto et al.~\cite{yanto2024} conduct a systematic literature review focused specifically on fraud detection in the banking sector. The review considers Naive Bayes, Logistic Regression, XGBoost, Autoencoder, KNN, LightGBM, Random Forest, SVM, Bidirectional LSTM, and GAN approaches. Data balancing and preprocessing are identified as important factors, while hybrid models are increasingly used. Real-time data and adaptive detection are identified as important future directions. The main strength is its direct focus on banking fraud. A limitation is its dependence on the studies included in the selected open-access database search. The review is particularly useful because it connects algorithm selection directly with banking fraud detection.
+
+\subsection{Big Data Applications in the Banking Sector}
+Nobanee et al.~\cite{nobanee2021} review research on big-data applications in banking using bibliometric analysis. The study examines 60 papers published between 2012 and 2020 and identifies themes including investment, profit, competition, credit-risk analysis, banking crime, fintech, and broader use of big data in financial services. The research identifies relatively limited literature on some banking big-data applications and discusses future directions. A strength is the banking-specific big-data perspective. A limitation is that the study is not specifically focused on machine-learning fraud detection and its literature search covers an older period. It is nevertheless important because the proposed research depends on understanding how big-data technologies support banking analytics.
+
+\subsection{Analysis of Machine Learning Algorithms for Online Fraud Detection}
+Minastireanu and Mesnita~\cite{minastireanu2019} review research on machine learning algorithms for online fraud detection using a systematic quantitative literature review methodology. The authors construct a hierarchical typology of machine-learning algorithms and examine them using criteria including accuracy, coverage, and cost. The review demonstrates that different algorithms have different advantages and disadvantages and that algorithm selection should depend on the specific requirements of the fraud-detection problem. Its strength is the explicit comparison criteria. Its major limitation is its publication date, but it provides a useful historical foundation for understanding the evolution of algorithm selection in fraud detection.
+
+\subsection{Explainable Artificial Intelligence for Financial Fraud Detection}
+Zhou et al.~\cite{zhou2023} propose a user-centered explainable artificial intelligence approach for financial fraud detection. The study is particularly relevant to banking fraud detection because it considers not only the predictive capability of artificial intelligence models but also the need to make fraud-detection decisions understandable to users. The work highlights the importance of explainability and user trust in financial fraud-detection settings. For the current research, this perspective extends the evaluation problem beyond predictive accuracy and toward the practical interpretation of model decisions.
+
+\section{Literature Synthesis and Research Gaps}\label{sec:synth}
+The reviewed studies demonstrate several common themes. First, machine learning has become a central method for financial fraud detection. Technical studies repeatedly evaluate supervised classification algorithms including Random Forest, Decision Trees, Gradient Boosting, XGBoost, CatBoost, neural networks, and related models~\cite{mytnyk2023,alsuwailem2023,theodorakopoulos2025,preciado2025}. Review studies similarly identify supervised learning as an important research category~\cite{ali2022,gandhar2024,hernandezaros2024,yanto2024}.
+
+Second, fraud detection is strongly affected by class imbalance. Fraudulent transactions are normally much less frequent than legitimate transactions. Chang et al.~\cite{chang2024} explicitly demonstrate the trade-off between under-sampling and SMOTE, while review studies repeatedly identify imbalance as a major methodological problem~\cite{ali2022,gandhar2024,hafez2025}.
+
+Third, ensemble learning is an important trend. Mytnyk et al.~\cite{mytnyk2023} investigate stacked generalization, while Theodorakopoulos et al.~\cite{theodorakopoulos2025} report strong performance from XGBoost, Random Forest, and CatBoost within a distributed environment. These studies indicate that combining models can be useful, although the resulting systems may require more computational resources and more complex maintenance.
+
+Fourth, the literature increasingly connects machine learning with big-data infrastructure. Theodorakopoulos et al.~\cite{theodorakopoulos2025} demonstrate the use of PySpark for distributed processing, while Byrapu Reddy et al.~\cite{byrapureddy2024} emphasize big-data analytics for large transaction environments. Nobanee et al.~\cite{nobanee2021} provide a broader banking-specific view of how big-data technologies have developed across financial applications.
+
+Fifth, anomaly detection remains important. Bakumenko and Elragal~\cite{bakumenko2022} show the usefulness of machine learning for identifying anomalous financial observations, while review studies identify unsupervised learning and autoencoder-based approaches as important directions~\cite{gandhar2024,hernandezaros2024,yanto2024}. This is particularly important when labelled examples of new fraud types are scarce.
+
+Finally, interpretability and operational factors are becoming increasingly important. Kamal~\cite{kamal2023} demonstrates the relevance of data quality, interpretability, management support, and compliance readiness, while Zhou et al.~\cite{zhou2023} emphasize a user-centered explainable-AI perspective. Recent review literature also identifies graph neural networks, federated learning, hybrid models, and meta-heuristic optimization as emerging approaches~\cite{binsulaiman2022,hafez2025,cheng2025}.
+
+\subsection{Real-Time Detection}
+Many studies evaluate machine learning models using historical datasets. However, banking institutions require decisions to be made within a very short time after a transaction is initiated. Future research should therefore investigate real-time streaming architectures in which transaction data can be processed continuously.
+
+\subsection{Class Imbalance}
+Class imbalance remains one of the most consistent problems across the reviewed literature. Techniques such as SMOTE, under-sampling, oversampling, and hybrid methods can improve detection, but they can also affect precision and recall. More systematic comparisons of imbalance-handling strategies are required.
+
+\subsection{Concept Drift}
+Fraud behaviour changes over time. A model trained on historical fraudulent behaviour may therefore become less effective when new fraud patterns emerge. Continuous learning, adaptive modelling, and model updating are important areas for future investigation.
+
+\subsection{Scalable Big-Data Processing}
+Large banks process extremely large transaction streams. Distributed frameworks such as PySpark provide a way to scale model training and inference, but the relationship between model complexity, processing latency, and infrastructure cost requires additional empirical research.
+
+\subsection{Explainability}
+High-performing machine-learning models may be difficult for investigators and compliance teams to interpret. Future systems should therefore consider explainability alongside accuracy, precision, recall, F1-score, AUC, and latency. The user-centered perspective discussed by Zhou et al.~\cite{zhou2023} is relevant to this requirement.
+
+\subsection{Data Quality and Privacy}
+The reviewed literature demonstrates that model performance depends strongly on data quality. At the same time, financial transaction data are highly sensitive. Future research should investigate approaches that improve data quality while preserving privacy and regulatory compliance, including privacy-preserving learning approaches discussed in the review literature~\cite{binsulaiman2022}.
+
+\section{Discussion and Implications for the Proposed Research}\label{sec:disc}
+The literature indicates that no single machine learning algorithm is universally appropriate for financial fraud detection. Different models provide different advantages depending on dataset characteristics, fraud type, class imbalance, computational resources, and operational requirements. Traditional supervised algorithms remain important because they can provide strong performance on structured transaction data. Random Forest and gradient-boosting approaches appear repeatedly across the literature. At the same time, deep learning and graph-based approaches are receiving increasing attention because they can model more complex patterns~\cite{gandhar2024,cheng2025}.
+
+Model accuracy alone is not sufficient for a banking fraud-detection system. False positives can increase investigation workload, while false negatives can result in financial losses. Consequently, evaluation should consider precision, recall, F1-score, AUC, specificity, calibration, latency, and computational requirements. The technical literature illustrates this need through the different metrics used by Chang et al.~\cite{chang2024}, Theodorakopoulos et al.~\cite{theodorakopoulos2025}, and Kamal~\cite{kamal2023}.
+
+Big-data technologies provide an important complementary component. The ability to ingest, store, transform, and analyse large transaction streams can make advanced machine-learning models practical in financial environments. The literature therefore supports an integrated research direction in which machine-learning algorithms are combined with big-data processing rather than treating algorithm selection and data infrastructure as separate problems.
+
+For the proposed research, the literature suggests a framework that compares several supervised algorithms, incorporates anomaly-detection methods where appropriate, and evaluates the models using multiple performance metrics. The framework should also consider the infrastructure required to process large transaction volumes efficiently. Data balancing, concept drift, explainability, privacy, and real-time processing should be treated as design considerations rather than as secondary issues.
+
+% ===== METHODS =====
+\section{Methods and Materials}\label{sec:methods}
+This section describes how the proposed study will be conducted. It translates the research gaps identified in the literature synthesis (class imbalance, concept drift, scalable processing, and explainability) into a reproducible experimental protocol. The section is organised into three parts: the research design (Section~\ref{sec:design}), the data sources and experimental environment (Section~\ref{sec:data}), and the evaluation metrics and success criteria (Section~\ref{sec:metrics}).
+
+\subsection{Research Design}\label{sec:design}
+\subsubsection{Overall Research Strategy}
+The study adopts a quantitative, experimental, and comparative research design supported by a simulation component. Several machine learning (ML) algorithms and data-balancing strategies are treated as independent variables, while detection quality, calibration, and processing efficiency are treated as dependent variables. The datasets, data splits, random seeds, and hardware are held constant so that observed differences can be attributed to the manipulated factors. The simulation component consists of a synthetic mobile-money dataset that substitutes for confidential bank records and allows the pipeline to be tested at big-data scale.
+
+This design is appropriate for three reasons. First, the research problem is inherently measurable: the effectiveness of a fraud detector is expressed through numerical indicators such as recall, precision, and latency, which calls for a quantitative rather than a qualitative or survey-based approach. Survey-based and mixed designs, such as the one used by Kamal~\cite{kamal2023}, are valuable for studying organisational readiness, but they do not answer the question of which algorithm detects fraud best. Second, the literature consistently shows that no single algorithm is universally superior and that performance depends on data structure and class distribution~\cite{alsuwailem2023,yanto2024,minastireanu2019}; a controlled comparison is therefore needed rather than the evaluation of one model. Third, real banking transactions are highly sensitive and rarely released to researchers~\cite{binsulaiman2022,hernandezaros2024}, which makes public benchmark data and simulated data the only feasible sources for an academic study.
+
+The study is guided by four research questions. RQ1 asks which supervised algorithms achieve the best detection performance on highly imbalanced transaction data. RQ2 asks how imbalance-handling strategies affect the trade-off between precision and recall. RQ3 asks how training time and inference latency scale when the best pipeline is executed in a distributed big-data framework. RQ4 asks whether the decisions of the best model can be explained at the level of individual transactions.
+
+\subsubsection{Methodology}
+The workflow follows the Cross-Industry Standard Process for Data Mining (CRISP-DM), adapted to fraud detection in six stages: (i) data acquisition, (ii) preprocessing and feature engineering, (iii) class-imbalance handling, (iv) model training and hyperparameter tuning, (v) evaluation and statistical comparison, and (vi) explainability and scalability analysis. CRISP-DM is selected because it is iterative, technology-neutral, and widely used for applied data-mining projects, which allows the preprocessing and modelling stages to be revisited when evaluation reveals problems.
+
+\subsubsection{Candidate Models}
+The model set reflects the algorithms that appear most frequently in the reviewed literature~\cite{theodorakopoulos2025,ali2022,hernandezaros2024,yanto2024}. Logistic Regression (LR) serves as an interpretable baseline. Random Forest (RF) performed strongly on banking transfers~\cite{preciado2025} and financial crime data~\cite{alsuwailem2023}. XGBoost and CatBoost were the best-performing models in the distributed study of Theodorakopoulos et al.~\cite{theodorakopoulos2025}. A Multilayer Perceptron (MLP) represents the neural network family used by Xiong et al.~\cite{xiong2022}. A stacking ensemble, in which a logistic meta-learner combines RF, XGBoost, and CatBoost, follows the stacked generalisation of Mytnyk et al.~\cite{mytnyk2023}. Isolation Forest serves as an unsupervised anomaly detector, motivated by the scarcity of labelled fraud examples discussed by Bakumenko and Elragal~\cite{bakumenko2022}. Graph neural networks~\cite{cheng2025} are excluded from the current scope because the selected datasets do not provide a rich relational structure between customers, devices, and merchants; they are identified as a direction for future work.
+
+\subsubsection{Class-Imbalance Handling}
+Three strategies are compared, building on Chang et al.~\cite{chang2024}: (a) no resampling with cost-sensitive class weights, (b) random under-sampling (RUS) of legitimate transactions, and (c) the Synthetic Minority Over-sampling Technique (SMOTE). Resampling is applied only to the training partition inside each cross-validation fold, never to the validation or test data, to prevent information leakage and optimistic estimates. Combining five supervised models, three balancing strategies, and two datasets yields 30 supervised configurations; with Isolation Forest on both datasets, 32 configurations are evaluated.
+
+\subsubsection{Validation Protocol}
+Because fraud patterns change over time, each dataset is split chronologically into training (60\%), validation (20\%), and test (20\%) partitions, rather than randomly. This mirrors deployment, where a model trained on past transactions must classify future ones, and it exposes the effect of concept drift. Hyperparameters are tuned on the training partition by randomised search (50 iterations) with stratified five-fold cross-validation, using the area under the precision-recall curve as the objective. The decision threshold is then selected on the validation partition, and a threshold sensitivity analysis is performed, as in~\cite{kamal2023}. The test partition is used only once, for the final evaluation. Every configuration is repeated with five random seeds, and results are reported as mean $\pm$ standard deviation.
+
+\subsubsection{Explainability and Scalability Analysis}
+To address RQ4, SHapley Additive exPlanations (SHAP) are computed for the best model, producing global feature importance and local explanations for a sample of flagged transactions. This responds to the user-centred perspective on explainable fraud detection proposed by Zhou et al.~\cite{zhou2023}. To address RQ3, the best pipeline is re-implemented in Apache Spark using PySpark, following Theodorakopoulos et al.~\cite{theodorakopoulos2025}. It is executed on 10\%, 25\%, 50\%, and 100\% of the large dataset with one, two, and four executors, while training time, throughput, and latency are recorded.
+
+\subsection{Data Sources}\label{sec:data}
+\subsubsection{Datasets}
+Two open datasets are used (Table~\ref{tab:datasets}). The European credit card dataset contains real transactions made by European cardholders over two days in September 2013. For confidentiality, 28 of its features were transformed by principal component analysis (V1--V28), and only Time and Amount remain in original form. It is the most widely used benchmark in the reviewed literature~\cite{chang2024,theodorakopoulos2025}, which allows the results to be compared with published work.
+
+The PaySim dataset is a synthetic dataset generated by an agent-based simulator calibrated on one month of real logs from a mobile-money service. It contains over six million transactions with interpretable attributes (transaction type, amount, and account balances before and after each transaction). It is used because its size is sufficient to test big-data processing, and its features are interpretable enough to evaluate explanations.
+
+Proprietary bank data are not used because of confidentiality and regulatory restrictions~\cite{binsulaiman2022}, and self-collection of labelled fraud data is not feasible for the research team. Both datasets are publicly available on Kaggle and are downloaded once and stored with their checksums to guarantee reproducibility.
+
+\begin{table*}[!t]
+\centering
+\caption{Datasets used in the study.}\label{tab:datasets}
+\small
+\begin{tabular}{@{}p{2.6cm}p{2.2cm}p{1.9cm}p{2.1cm}p{4.3cm}p{2.6cm}@{}}
+\toprule
+Dataset & Type & Records & Fraud rate & Main features & Access / licence \\
+\midrule
+European credit card & Real, anonymised & 284,807 & 492 (0.172\%) & Time, Amount, V1--V28 (PCA), Class & Open, Kaggle (ODbL) \\
+PaySim & Synthetic (simulation) & 6,362,620 & 8,213 (0.129\%) & step, type, amount, origin and destination balances, isFraud & Open, Kaggle (CC BY-SA 4.0) \\
+\bottomrule
+\end{tabular}
+\end{table*}
+
+\subsubsection{Data Preparation}
+For the credit card dataset, duplicate records are removed, Amount is log-transformed and robust-scaled, and Time is converted into an hour-of-day feature. For PaySim, the transaction type is one-hot encoded and the hour of day is derived as step mod 24. Two balance-error features are engineered to capture inconsistencies typical of fraudulent transfers:
+\begin{align}
+e_{\mathrm{orig}} &= b^{\mathrm{new}}_{\mathrm{orig}} + a - b^{\mathrm{old}}_{\mathrm{orig}}, \label{eq:eorig}\\
+e_{\mathrm{dest}} &= b^{\mathrm{old}}_{\mathrm{dest}} + a - b^{\mathrm{new}}_{\mathrm{dest}}, \label{eq:edest}
+\end{align}
+where $a$ is the transaction amount and $b$ denotes account balances. Raw account identifiers are dropped and replaced with transaction-count features computed on the training partition only. The isFlaggedFraud field is removed because it is the output of an existing rule-based system and would leak label information. All scalers, encoders, and resamplers are fitted within a single imbalanced-learn pipeline on training data only.
+
+\subsubsection{Software and Hardware}
+All tools are open-source (Table~\ref{tab:software}). Models are implemented in Python using scikit-learn, imbalanced-learn, XGBoost, and CatBoost. Experiments on the smaller dataset run on the team's personal laptops, while PaySim and the scalability experiments run on Google Colab and on Spark in local and multi-executor mode. Code is version-controlled on GitHub, and the paper is written in Overleaf.
+
+\begin{table}[!t]
+\centering
+\caption{Software and hardware environment.}\label{tab:software}
+\small
+\begin{tabular}{@{}p{2.2cm}p{5.2cm}@{}}
+\toprule
+Component & Tool / specification \\
+\midrule
+Language & Python 3.11, Jupyter notebooks \\
+Data handling & pandas, NumPy \\
+ML models & scikit-learn, XGBoost, CatBoost \\
+Imbalance & imbalanced-learn (RUS, SMOTE) \\
+Big data & Apache Spark 3.5 (PySpark, MLlib) \\
+Explainability & SHAP \\
+Visualisation & Matplotlib, Seaborn \\
+Hardware & Laptops (8-core CPU, 16 GB RAM); Google Colab \\
+Reproducibility & GitHub, fixed random seeds, requirements.txt \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\subsection{Evaluation Metrics}\label{sec:metrics}
+\subsubsection{Confusion-Matrix Metrics}
+Fraud is treated as the positive class. From the numbers of true positives ($TP$), false positives ($FP$), true negatives ($TN$), and false negatives ($FN$), the following measures are computed:
+\begin{align}
+\mathrm{Accuracy} &= \frac{TP+TN}{TP+TN+FP+FN}, \label{eq:acc}\\
+\mathrm{Precision} &= \frac{TP}{TP+FP},\quad \mathrm{Recall} = \frac{TP}{TP+FN}, \label{eq:pr}\\
+\mathrm{Specificity} &= \frac{TN}{TN+FP}, \label{eq:spec}\\
+F_\beta &= (1+\beta^2)\frac{\mathrm{Precision}\cdot\mathrm{Recall}}{\beta^2\,\mathrm{Precision}+\mathrm{Recall}}, \label{eq:fbeta}\\
+\mathrm{MCC} &= \frac{TP\cdot TN - FP\cdot FN}{\sqrt{(TP+FP)(TP+FN)(TN+FP)(TN+FN)}}. \label{eq:mcc}
+\end{align}
+The F1 score ($\beta=1$) is reported together with F2, which gives recall twice the weight of precision because a missed fraud is usually more costly than a false alert. Accuracy is reported only for comparison with earlier studies: on the credit card dataset, a trivial classifier that labels every transaction as legitimate already reaches 99.83\% accuracy. The Matthews correlation coefficient (MCC) is used as a balanced single-number summary because it uses all four cells of the confusion matrix.
+
+\subsubsection{Threshold-Independent Metrics}
+The area under the ROC curve, $\text{ROC-AUC}=\int_0^1 \mathrm{TPR}\,d(\mathrm{FPR})$, is reported because it is used by most technical studies~\cite{mytnyk2023,kamal2023}. However, on highly imbalanced data the precision-recall curve is more informative than the ROC curve. The primary metric of the study is therefore the area under the precision-recall curve, estimated by average precision:
+\begin{equation}
+\mathrm{AP}=\sum_n (R_n-R_{n-1})P_n, \label{eq:ap}
+\end{equation}
+where $P_n$ and $R_n$ are the precision and recall at the $n$-th threshold.
+
+\subsubsection{Calibration}
+Because banks rank alerts by predicted risk, probability quality is measured by the Brier score, also used in~\cite{theodorakopoulos2025}:
+\begin{equation}
+\mathrm{BS}=\frac{1}{N}\sum_{i=1}^{N}(p_i-y_i)^2, \label{eq:brier}
+\end{equation}
+where $p_i$ is the predicted fraud probability and $y_i\in\{0,1\}$ is the true label.
+
+\subsubsection{Operational and Cost Metrics}
+The alert rate $(TP+FP)/N$ estimates the investigation workload highlighted by Kamal~\cite{kamal2023}. A cost measure combines missed fraud and review effort:
+\begin{equation}
+C=\sum_{i\in FN} a_i + c_{\mathrm{rev}}(TP+FP), \label{eq:cost}
+\end{equation}
+where $a_i$ is the amount of a missed fraudulent transaction and $c_{\mathrm{rev}}$ is a fixed cost of reviewing one alert. Efficiency is measured by training time, throughput (transactions per second), and median and 95th-percentile inference latency per transaction. For the Spark experiments, speed-up and parallel efficiency are computed as
+\begin{equation}
+S(n)=\frac{T_1}{T_n},\qquad E(n)=\frac{S(n)}{n}, \label{eq:speedup}
+\end{equation}
+where $T_n$ is the training time with $n$ executors.
+
+\subsubsection{Statistical Comparison and Explainability}
+Differences between models are tested with the Friedman test followed by the Nemenyi post-hoc test, and the two best models are compared on the test set with McNemar's test, at a significance level of $\alpha=0.05$. Explanations are assessed by checking whether the top SHAP features agree with domain knowledge (for example, balance errors in PaySim) and by measuring the stability of feature rankings across seeds with Spearman's rank correlation.
+
+\subsubsection{Success Criteria}
+The study is considered successful if the criteria in Table~\ref{tab:success} are met. The thresholds are derived from values reported in the reviewed literature~\cite{mytnyk2023,chang2024,kamal2023}. Together, these metrics evaluate not only whether the models detect fraud accurately, but also whether they are calibrated, efficient, scalable, and interpretable, which the literature identifies as necessary for practical deployment in the banking sector.
+
+\begin{table}[!t]
+\centering
+\caption{Success criteria.}\label{tab:success}
+\small
+\begin{tabular}{@{}p{2.6cm}p{4.8cm}@{}}
+\toprule
+Indicator & Target \\
+\midrule
+PR-AUC (AP) & $\ge$ 10\% relative gain over the LR baseline \\
+ROC-AUC & $\ge$ 0.95 \\
+Precision / Recall & both $\ge$ 0.80 at the selected threshold \\
+MCC & $\ge$ 0.80 \\
+Brier score & lower than the LR baseline \\
+Latency & 95th percentile $\le$ 50 ms per transaction \\
+Scalability & near-linear time growth; $E(4)\ge 0.7$ \\
+Significance & $p<0.05$ for the best vs.\ second-best model \\
+Explainability & top SHAP features stable across seeds ($\rho\ge 0.8$) \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+% ===== RESULTS =====
+\section{Results}\label{sec:results}
+
+\subsection{Status of the Results and Link to the Research Questions}
+The experimental pipeline described in Section~\ref{sec:methods} has not been executed yet, so this section follows the \emph{expected results} option of the assignment. The tables and figures show the structure the final results will have. Every value that is not a documented property of a public dataset is written in italics and marked as expected, or left as TBD, and every expectation is tied to the reviewed literature. None of the italic values is an experimental measurement. Where a dataset property is taken from its public documentation, the text says so.
+
+The section follows the four research questions of Section~\ref{sec:methods}. RQ1 asks which supervised algorithm detects fraud best on highly imbalanced transaction data, RQ2 asks how the imbalance-handling strategies change the balance between precision and recall, RQ3 asks how training time and inference latency scale in a distributed framework, and RQ4 asks whether the decisions of the best model can be explained for individual transactions. The data actually used are described first, followed by one subsection for each question, the additional and error analyses, and the reproducibility details. Interpretation of the results and comparison with other studies are left to the Discussion.
+
+\subsection{Data Used and Deviations from the Plan}\label{sec:res_data}
+Table~\ref{tab:data} describes the final datasets. The European credit-card dataset contains 284,807 transactions, of which 492 (0.172\%) are fraudulent, collected over two days in September 2013. Removing exact duplicates, as planned, is expected to leave about 283,726 records with 473 frauds, which means that about 1,081 rows would be removed; the script will confirm these counts. PaySim contains 6,362,620 transactions, of which 8,213 (0.129\%) are fraudulent, spread over 743 hourly steps or roughly 30 simulated days. No PaySim rows are removed, but the \texttt{isFlaggedFraud} column is dropped because it is the output of an existing rule-based system and would leak label information, and raw account identifiers are replaced by transaction-count features computed on the training partition only. The chronological 60/20/20 split gives the partition sizes in Table~\ref{tab:data}. How many frauds fall into each partition depends on when the frauds occur and is therefore TBD.
+
+Before modelling, the script will also check the cleaned data for missing values, constant columns and the class balance of each partition, and these checks will be reported next to Table~\ref{tab:data}. The documentation of the credit-card dataset lists no missing values, which we expect to confirm, and PaySim is generated by a simulator and is expected to be complete as well. Because the split is chronological, the fraud rate of the three partitions can differ from the overall rate, and a partition with very few frauds will be flagged in the text instead of being silently used. Only after these checks will the scalers, encoders and resamplers be fitted on the training partition, as specified in Section~\ref{sec:methods}.
+
+\begin{table*}[!t]
+\centering
+\caption{Final datasets. Raw counts and fraud rates come from the dataset documentation; split sizes are the 60/20/20 arithmetic rounded to whole records. Values in italics are expected, and TBD entries will be produced by the experiment script.}\label{tab:data}
+\small
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{@{}lccccccc@{}}
+\toprule
+Dataset & Period & Raw records & After cleaning & Train / validation / test & Fraud (raw) & Fraud per split & Removed and why \\
+\midrule
+European credit card & 2 days, Sep.\ 2013 & 284,807 & \e{283,726} & 170,236 / 56,745 / 56,745 & 492 (0.172\%) & TBD / TBD / TBD & \e{1,081 duplicate rows} \\
+PaySim (synthetic) & 743 steps ($\approx$30 days) & 6,362,620 & 6,362,620 & 3,817,572 / 1,272,524 / 1,272,524 & 8,213 (0.129\%) & TBD / TBD / TBD & no rows; 1 leaking column \\
+\bottomrule
+\end{tabular}}
+\end{table*}
+
+We report three deviations or clarifications with respect to Assignment~2. The first is that the experiments are not yet run, so expected values replace measured ones. The second concerns the Friedman test, which Section~\ref{sec:methods} defines over datasets. Two datasets are too few blocks for a meaningful test, so we will use dataset--seed pairs as blocks (ten per balancing strategy). Seeds on the same data are not independent, so the resulting $p$-values will be treated as indicative and backed by bootstrap intervals. The third is that the credit-card data cover only 48 hours. The chronological test partition will therefore contain few frauds, probably in the tens, which makes its estimates unstable. For this reason PaySim is the main evidence for RQ1--RQ3, and credit-card results will always be reported with bootstrap 95\% confidence intervals.
+
+\subsection{RQ1: Detection Performance of the Algorithms}\label{sec:res_rq1}
+Table~\ref{tab:main} is the main results table. All seven models are evaluated on the same chronological test partition of each dataset, using the balancing strategy and decision threshold chosen on the validation partition. The final cells will contain the mean and standard deviation over five seeds. Because nothing has been measured yet, the table shows expected ranges for the five main metrics and TBD for F2, the Brier score and the 95th-percentile latency. The wide ranges for some models are intentional: they reflect how little the literature tells us about, for example, Logistic Regression on PaySim. Accuracy, specificity and F1 are computed by the same script and will be given in a supplementary table; we omit them here for space and because accuracy alone is uninformative at this class imbalance.
+
+\begin{table*}[!t]
+\centering
+\caption{Main results on the test partitions (\textbf{expected ranges, not measured}). Italic entries are expected values; TBD entries are not yet estimated. In the final version each cell will show mean $\pm$ SD over five seeds, and the best model per dataset will also carry a bootstrap 95\% CI. Prec.\ and Rec.\ are taken at the threshold chosen on the validation partition; latency is the 95th percentile per transaction in ms. The primary metric is PR-AUC (average precision).}\label{tab:main}
+\small
+\setlength{\tabcolsep}{4pt}
+\begin{tabular}{@{}lccccccccc@{}}
+\toprule
+Model & PR-AUC & ROC-AUC & Prec. & Rec. & MCC & F2 & Brier & Latency (ms) \\
+\midrule
+\multicolumn{9}{@{}l}{\textbf{European credit card (test partition)}}\\
+\midrule
+LR & \e{0.60--0.75} & \e{0.95--0.98} & \e{0.70--0.90} & \e{0.60--0.80} & \e{0.60--0.80} & \e{TBD} & \e{TBD} & \e{TBD} \\
+RF & \e{0.75--0.85} & \e{0.93--0.98} & \e{0.80--0.95} & \e{0.70--0.85} & \e{0.75--0.88} & \e{TBD} & \e{TBD} & \e{TBD} \\
+XGBoost & \e{0.75--0.88} & \e{0.95--0.99} & \e{0.80--0.95} & \e{0.70--0.85} & \e{0.75--0.88} & \e{TBD} & \e{TBD} & \e{TBD} \\
+CatBoost & \e{0.75--0.88} & \e{0.95--0.99} & \e{0.80--0.95} & \e{0.70--0.85} & \e{0.75--0.88} & \e{TBD} & \e{TBD} & \e{TBD} \\
+MLP & \e{0.65--0.80} & \e{0.93--0.98} & \e{0.70--0.90} & \e{0.65--0.85} & \e{0.70--0.85} & \e{TBD} & \e{TBD} & \e{TBD} \\
+Stacking & \e{0.78--0.90} & \e{0.95--0.99} & \e{0.80--0.95} & \e{0.72--0.87} & \e{0.78--0.90} & \e{TBD} & \e{TBD} & \e{TBD} \\
+Isolation Forest & \e{0.10--0.30} & \e{0.90--0.96} & \e{0.05--0.30} & \e{0.60--0.85} & \e{0.10--0.40} & \e{TBD} & \e{TBD} & \e{TBD} \\
+\midrule
+\multicolumn{9}{@{}l}{\textbf{PaySim (test partition)}}\\
+\midrule
+LR & \e{0.30--0.70} & \e{0.90--0.99} & \e{0.30--0.80} & \e{0.50--0.90} & \e{0.40--0.80} & \e{TBD} & \e{TBD} & \e{TBD} \\
+RF & \e{0.80--0.99} & \e{0.97--1.00} & \e{0.80--0.99} & \e{0.70--0.99} & \e{0.80--0.99} & \e{TBD} & \e{TBD} & \e{TBD} \\
+XGBoost & \e{0.85--0.99} & \e{0.98--1.00} & \e{0.80--0.99} & \e{0.80--0.99} & \e{0.85--0.99} & \e{TBD} & \e{TBD} & \e{TBD} \\
+CatBoost & \e{0.85--0.99} & \e{0.98--1.00} & \e{0.80--0.99} & \e{0.80--0.99} & \e{0.85--0.99} & \e{TBD} & \e{TBD} & \e{TBD} \\
+MLP & \e{0.50--0.90} & \e{0.95--0.99} & \e{0.50--0.90} & \e{0.60--0.90} & \e{0.60--0.90} & \e{TBD} & \e{TBD} & \e{TBD} \\
+Stacking & \e{0.85--0.99} & \e{0.98--1.00} & \e{0.80--0.99} & \e{0.80--0.99} & \e{0.85--0.99} & \e{TBD} & \e{TBD} & \e{TBD} \\
+Isolation Forest & \e{0.05--0.40} & \e{0.80--0.97} & \e{0.05--0.40} & \e{0.50--0.90} & \e{0.10--0.40} & \e{TBD} & \e{TBD} & \e{TBD} \\
+\bottomrule
+\end{tabular}
+\end{table*}
+
+The expectation that Random Forest, XGBoost and CatBoost will beat the Logistic Regression baseline comes from earlier work reporting strong results for these models on transaction data~\cite{theodorakopoulos2025,preciado2025,kamal2023}. We do not state an expected order among the three, since the ranking of algorithms has been shown to change with the structure of the data~\cite{alsuwailem2023}. The stacking ensemble is expected to match its best base learner or exceed it slightly~\cite{mytnyk2023}, although we do not assume a gain. Isolation Forest uses no labels and is therefore expected to find many frauds at low precision. On the credit-card dataset, the joint precision and recall target of 0.80 is expected to be hard to reach on a chronological test split with few frauds. On PaySim, the balance-error features defined in Eqs.~\eqref{eq:eorig} and~\eqref{eq:edest} are expected to make the target attainable. Figure~\ref{fig:pr} shows the layout of the precision--recall figure that will accompany Table~\ref{tab:main}.
+
+Table~\ref{tab:main} lists one row per model, using the best of the three balancing strategies for that model on the validation partition. The full grid of 32 configurations (five supervised models with three strategies on two datasets, plus Isolation Forest on both datasets) will be given in a supplementary table, so that the choice of strategy behind each row can be checked. Each configuration is trained once per seed on the training partition, the threshold is fixed on the validation partition, and the test partition is scored a single time. In this way the test data play no part in tuning, and every model in the table is evaluated on exactly the same transactions.
+
+Each Spark configuration will be run three times, and the median training time will be used to compute $S(n)$ and $E(n)$, so that a single slow run caused by the shared Colab environment does not dominate a result. Inference latency will be measured on a fixed sample of test transactions after a warm-up run, and throughput will be computed from the total scoring time for the full test partition. The comparison between the single-machine scikit-learn pipeline and the Spark pipeline will be reported only if both give the same predictions up to numerical tolerance; otherwise the difference will be described.
+
+\begin{figure}[!t]
+\centering
+\begin{tikzpicture}
+\begin{axis}[width=0.88\columnwidth,height=5.2cm,xlabel={Recall (fraction of frauds detected)},ylabel={Precision},xmin=0,xmax=1,ymin=0,ymax=1,grid=major,tick label style={font=\small},label style={font=\small}]
+\node[font=\scriptsize,align=center,fill=white,draw] at (axis cs:0.5,0.5) {precision--recall curves\\of the seven models: TBD};
+\end{axis}
+\end{tikzpicture}
+\caption{Layout of the precision--recall figure for the PaySim test partition (\textbf{no measured data yet}). One curve per model will be drawn, with the no-skill level equal to the fraud rate.}\label{fig:pr}
+\end{figure}
+
+\subsection{Uncertainty and Statistical Testing}\label{sec:res_stat}
+Variability will be reported as the standard deviation over the five seeds. In addition, the best model on each dataset will receive a stratified bootstrap 95\% confidence interval (1,000 resamples of the test partition) for PR-AUC, precision and recall; on the credit-card test partition these intervals are expected to be wide because of the small number of frauds. The Friedman test with Nemenyi post-hoc comparison will be applied to PR-AUC over the ten dataset--seed blocks, and McNemar's test will compare the two best models on the test partition at $\alpha=0.05$. We will call one model better than another only when the corresponding test is significant. Where an interval overlaps or $p\ge0.05$, the difference will be reported as not significant. Test statistics, $p$-values and the critical-difference diagram are TBD, and a null result between the two best boosted models is a realistic outcome that we will report as it is.
+
+\subsection{RQ2: Effect of the Imbalance-Handling Strategies}\label{sec:res_rq2}
+Table~\ref{tab:balance} compares cost-sensitive class weights, random under-sampling and SMOTE for the best model from RQ1, with resampling applied only to the training folds. Following Chang et al.~\cite{chang2024}, under-sampling is expected to raise recall at the cost of precision, and SMOTE is expected to sit between the two. Class weights are expected to give the best precision at a similar PR-AUC. These are directions, not predictions of size, and a strategy will be called better only if the paired test supports it. The threshold is re-tuned on the validation partition for every strategy, so differences in precision and recall may partly reflect the threshold and not the resampling itself. This is why PR-AUC, which does not depend on a threshold, is reported next to them.
+
+\begin{table}[!t]
+\centering
+\caption{Balancing strategy and feature ablation for the best model on the PaySim test partition. All cells are TBD; the last column gives the \emph{expected} direction relative to class weights (not measured).}\label{tab:balance}
+\footnotesize
+\setlength{\tabcolsep}{2pt}
+\begin{tabular}{@{}lcccp{2.3cm}@{}}
+\toprule
+Configuration & PR-AUC & Prec. & Rec. & Expected vs.\ weights \\
+\midrule
+Class weights & TBD & TBD & TBD & reference \\
+Under-sampling (RUS) & TBD & TBD & TBD & Rec.\ $\uparrow$, Prec.\ $\downarrow$ \\
+SMOTE & TBD & TBD & TBD & Rec.\ $\uparrow$ (less), Prec.\ $\downarrow$ \\
+No balance-error features & TBD & TBD & TBD & all $\downarrow$ \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\subsection{RQ3: Scalability in Apache Spark}\label{sec:res_rq3}
+The best pipeline will be re-implemented in PySpark and run on 10\%, 25\%, 50\% and 100\% of PaySim with one, two and four executors. Figure~\ref{fig:speedup} shows the layout of the speed-up plot; only the ideal linear line is drawn because no timings exist yet. We will record training time, throughput in transactions per second, and median and 95th-percentile inference latency, and compute the speed-up $S(n)$ and efficiency $E(n)$ from Eq.~\eqref{eq:speedup}. On the smaller fractions, start-up and shuffle overhead in Spark are expected to dominate, so near-linear speed-up is expected only on the full dataset, and reaching $E(4)\ge0.7$ is uncertain. Whether the 95th-percentile latency stays under 50 ms is TBD and depends on whether latency is measured per transaction or per micro-batch; the final text will state which.
+
+\begin{figure}[!t]
+\centering
+\begin{tikzpicture}
+\begin{axis}[width=0.8\columnwidth,height=5.2cm,xlabel={Number of executors $n$},ylabel={Speed-up $S(n)=T_1/T_n$},xmin=1,xmax=4,ymin=0,ymax=4.5,xtick={1,2,4},grid=major,legend style={font=\scriptsize,at={(0.03,0.97)},anchor=north west},tick label style={font=\small},label style={font=\small}]
+\addplot[dashed,black,thick] coordinates {(1,1)(2,2)(4,4)};
+\addlegendentry{ideal (linear)}
+\node[font=\scriptsize,align=center,fill=white,draw] at (axis cs:2.7,1.6) {measured curves TBD\\(10\%, 25\%, 50\%, 100\%)};
+\end{axis}
+\end{tikzpicture}
+\caption{Layout of the Spark speed-up plot (\textbf{no measured data yet}). The dashed line is the ideal reference; one curve per data fraction will be added.}\label{fig:speedup}
+\end{figure}
+
+\subsection{RQ4: Explainability}\label{sec:res_rq4}
+SHAP values will be computed for the best model, giving a global feature ranking and local explanations for a sample of flagged transactions. On PaySim the top features are expected to include the two balance-error features, the transaction amount and the transaction type, because the balance-error features were built to expose exactly these inconsistencies. On the credit-card dataset the ranking is expected to be harder to read, since V1--V28 are PCA components without meaningful names. Stability will be measured by Spearman's $\rho$ between feature rankings across seeds, with a target of $\rho\ge0.8$; the value is TBD. Agreement with domain knowledge will be judged for PaySim only, and credit-card explanations will be described at the level of components.
+
+\subsection{Additional Analyses and Error Analysis}\label{sec:res_add}
+We plan three additional analyses. The first is the feature ablation in Table~\ref{tab:balance}, which removes the balance-error features to measure how much they contribute. The second is a threshold-sensitivity analysis on the validation partition, plotting precision, recall and F2 against the decision threshold together with the alert rate $(TP+FP)/N$ and the cost $C$ of Eq.~\eqref{eq:cost}, following~\cite{kamal2023}. The third is a per-group analysis of PaySim, reporting recall by transaction type, since fraud in this simulator occurs only in transfer and cash-out transactions.
+
+Figure~\ref{fig:cm} shows the planned confusion-matrix layout for the best model on each dataset. The error analysis will list the false negatives with the largest amounts, because these dominate the cost $C$, and the highest-scoring false positives, and for each case it will state whether the SHAP explanation points to a systematic cause. We expect, without having verified it, that the hardest frauds are those with small amounts and consistent balances, and that recall may drop on the test partition because of drift relative to the training period. Negative outcomes will be reported without exclusion, including any model that fails to reach the target 10\% relative PR-AUC gain over the baseline.
+
+The cost measure $C$ requires a review cost $c_{\mathrm{rev}}$ per alert, which Section~\ref{sec:methods} describes as fixed but does not give a value. We therefore state this as a clarification of the plan: $c_{\mathrm{rev}}$ will be varied over a range of plausible values, and the ranking of the models by $C$ will be reported for each value, since a single arbitrary value could change the ranking. The alert rate will be reported for the selected threshold of each model. Both quantities are TBD.
+
+\begin{figure}[!t]
+\centering
+\begin{tikzpicture}[scale=0.75,every node/.style={font=\small}]
+\foreach \dx in {0,4.6}{
+\begin{scope}[xshift=\dx cm]
+\foreach \x/\y/\t in {0/1/TN,1/1/FP,0/0/FN,1/0/TP}{
+  \draw (\x*1.6,\y*1.1) rectangle ++(1.6,1.1);
+  \node at (\x*1.6+0.8,\y*1.1+0.55) {\t = TBD};}
+\node at (0.8,2.45) {Pred.\ legit.};
+\node at (2.4,2.45) {Pred.\ fraud};
+\end{scope}}
+\node[rotate=90] at (-0.4,1.65) {Actual legit.};
+\node[rotate=90] at (-0.4,0.55) {Actual fraud};
+\node at (1.6,-0.4) {(a) Credit card};
+\node at (6.2,-0.4) {(b) PaySim};
+\end{tikzpicture}
+\caption{Layout of the test-set confusion matrices (counts of transactions) for the best model on each dataset (\textbf{no measured data yet}).}\label{fig:cm}
+\end{figure}
+
+\subsection{Success Criteria and Reproducibility}\label{sec:res_repro}
+Table~\ref{tab:criteria} restates the criteria of Table~\ref{tab:success} with their present status. None of them has been evaluated.
+
+\begin{table}[!t]
+\centering
+\caption{Status of the success criteria (\textbf{expected}; nothing has been evaluated).}\label{tab:criteria}
+\small
+\begin{tabular}{@{}p{2.9cm}p{1.9cm}p{2.6cm}@{}}
+\toprule
+Indicator & Target & Expected status \\
+\midrule
+PR-AUC gain over LR & $\ge10\%$ rel. & likely met \\
+ROC-AUC & $\ge0.95$ & likely met \\
+Precision and recall & both $\ge0.80$ & PaySim likely; credit card uncertain \\
+MCC & $\ge0.80$ & PaySim likely; credit card uncertain \\
+Brier score & below LR & likely met \\
+95th-pct.\ latency & $\le50$ ms & TBD \\
+Scalability $E(4)$ & $\ge0.7$ & uncertain \\
+Significance & $p<0.05$ & TBD; null result possible \\
+SHAP stability $\rho$ & $\ge0.8$ & TBD \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\textbf{Reproducibility.} The code will be released at \texttt{https://github.com/[TEAM-REPOSITORY]}; this is a placeholder, because the repository has not been created yet. The planned setup is Python 3.11 with scikit-learn, imbalanced-learn, XGBoost, CatBoost and SHAP, with exact versions frozen in \texttt{requirements.txt}, and Apache Spark 3.5 for RQ3. Experiments will run on laptops with an 8-core CPU and 16 GB of RAM and on Google Colab. Five random seeds will be fixed in advance (planned values 42 to 46), and both datasets will be stored with checksums. We expect the credit-card experiments to take hours rather than days on a laptop and the PaySim and Spark experiments to take longer on Colab, but this is an estimate, and a measured running time will replace it after the first full run.
+
+% ===== CONCL =====
+\section{Conclusion}\label{sec:concl}
+This article reviewed 20 academic studies on the application of machine learning algorithms and big-data analysis to financial fraud detection. Ten technical or research articles were analysed in terms of their problems, methodologies, findings, contributions, strengths, limitations, and relevance, and ten review articles were examined in terms of their scope, trends, methodologies, research gaps, and contribution to the field.
+
+The technical literature shows that Random Forest, XGBoost, CatBoost, neural networks, anomaly detection, and ensemble learning can identify fraudulent financial activity effectively. The review literature shows that fraud detection is an evolving field involving supervised learning, unsupervised learning, deep learning, graph neural networks, federated learning, and hybrid approaches. Class imbalance, concept drift, data quality, explainability, privacy, scalability, and real-time processing remain open challenges, which suggests that future systems should combine accurate models with scalable data-processing architectures and operational requirements rather than focus on predictive accuracy alone.
+
+On this basis we designed a controlled comparison of seven models and three balancing strategies on two public datasets, with chronological validation, SHAP explanations, a Spark scalability study and a multi-metric evaluation. The experiments are still to be run. Section~\ref{sec:results} therefore reports the expected outcomes, clearly marked as such, and the planned reproducibility setup. The next step is to execute the pipeline, replace every expected value by a measured one with its standard deviation or confidence interval and statistical test, and interpret the findings in the Discussion.
+
+
+\bibliographystyle{IEEEtran}
+\bibliography{refs}
+\end{document}
