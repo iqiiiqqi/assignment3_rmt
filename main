@@ -468,7 +468,19 @@ SHAP stability $\rho$ & $\ge0.8$ & TBD \\
 \end{tabular}
 \end{table}
 
-\textbf{Reproducibility.} The code will be released at \texttt{https://github.com/[TEAM-REPOSITORY]}; this is a placeholder, because the repository has not been created yet. The planned setup is Python 3.11 with scikit-learn, imbalanced-learn, XGBoost, CatBoost and SHAP, with exact versions frozen in \texttt{requirements.txt}, and Apache Spark 3.5 for RQ3. Experiments will run on laptops with an 8-core CPU and 16 GB of RAM and on Google Colab. Five random seeds will be fixed in advance (planned values 42 to 46), and both datasets will be stored with checksums. We expect the credit-card experiments to take hours rather than days on a laptop and the PaySim and Spark experiments to take longer on Colab, but this is an estimate, and a measured running time will replace it after the first full run.
+\noindent\textbf{Reproducibility.}
+The code will be released at
+\url{https://github.com/iqiiiqqi/assignment3_rmt}.
+The planned setup is Python 3.11 with scikit-learn, imbalanced-learn,
+XGBoost, CatBoost, and SHAP. Exact package versions will be specified
+in \texttt{requirements.txt}, and Apache Spark 3.5 will be used for RQ3.
+Experiments will run on laptops with an 8-core CPU and 16 GB of RAM
+and on Google Colab. Five random seeds, ranging from 42 to 46, will
+be fixed in advance, and both datasets will be stored with checksums.
+We expect the credit card experiments to take hours rather than days
+on a laptop, while the PaySim and Spark experiments may take longer
+on Colab. These are estimates, and measured running times will be
+reported after the first full run.
 
 % ===== CONCL =====
 \section{Conclusion}\label{sec:concl}
