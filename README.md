@@ -34,12 +34,4 @@ under-sampling and SMOTE. Split: chronological 60/20/20.
 - `pip install -r requirements.txt`
 - Random seeds: 42-46 (planned)
 
-## Project structure
-(To be filled in when the code is added.)
 
-## Status
-Work in progress. The experiments have not been run yet, so no results are
-reported here. Results will be added once the pipeline has been executed.
-
-## License
-Code: MIT. Datasets follow their original licences.
